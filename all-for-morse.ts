@@ -4,6 +4,7 @@
 //% block="Morse" weight=0 color=#000000 icon="\uf012"
 namespace Morse {
     //% block="create Morse string %text"
+    //% blockId=morse_create_string text.defl=".-"
     export function createMorseString(text: string): MorseString {
         return new MorseString(text);
     }
@@ -21,10 +22,8 @@ class MorseString {
         this.value = value;
     }
 
-    // Usamos $this en la etiqueta del bloque y definimos explícitamente su comportamiento visual.
-    //% block="convert $this to string"
-    //% this.shadow=variables_get
-    //% this.defl=cadenaMorse
+    //% block="convert %this to string" blockNamespace=Morse
+    //% this.shadow=morse_create_string
     public toString(): string {
         return this.value;
     }
