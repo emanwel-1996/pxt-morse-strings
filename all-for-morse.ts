@@ -1,3 +1,9 @@
+/**
+ * Functions for treating Morse strings
+ */
+//% block="Morse" weight=0 color=#000000 icon="\uf012"
+namespace Morse {}
+
 class MorseString {
     private text: string;
     constructor(text: string) {
@@ -14,9 +20,3 @@ class MorseString {
         return new MorseString(text).text
     }
 }
-
-/**
- * Functions for treating Morse strings
- */
-//% block="Morse" weight=0 color=#000000 icon="\uf012"
-namespace Morse {}
