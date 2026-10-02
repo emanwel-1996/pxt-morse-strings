@@ -21,7 +21,7 @@ class MorseString {
         this.value = value;
     }
 
-    //% block="convert %this to string" blockNamespace=Morse
+    //% block="convert $this to string" blockNamespace=Morse
     public toString(): string {
         return this.value;
     }
