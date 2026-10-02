@@ -3,7 +3,7 @@
  */
 //% block="Morse" weight=0 color=#000000 icon="\uf012"
 namespace Morse {
-    //% block="create Morse string"
+    //% block="create Morse string %text"
     export function createMorseString(text: string): MorseString {
         return new MorseString(text);
     }
@@ -21,7 +21,7 @@ class MorseString {
         this.value = value;
     }
 
-    //% block="convert to string" blockNamespace=Morse
+    //% block="convert %this to string" blockNamespace=Morse
     public toString(): string {
         return this.value;
     }
