@@ -2,21 +2,22 @@
  * Functions for treating Morse strings
  */
 //% block="Morse" weight=0 color=#000000 icon="\uf012"
-namespace Morse {}
+namespace Morse {
+    
+}
 
 class MorseString {
-    private text: string;
-    constructor(text: string) {
-        for (let i: number = 0; i < text.length; i++) {
-            if (text[i] !== "." && text[i] !== "-" && text[i] !== "/" && text[i] !== " ") {
+    private value: string;
+    constructor(value: string) {
+        for (let i: number = 0; i < value.length; i++) {
+            if (value[i] !== "." && value[i] !== "-" && value[i] !== "/" && value[i] !== " ") {
                 console.error("Invalid character.");
                 return;
             }
         }
-        this.text = text;
+        this.value = value;
     }
-    //% block="create Morse string %text" blockNamespace=Morse
-    public createMorseString(text: string): string {
-        return new MorseString(text).text
+    public get text(): string {
+        return this.value;
     }
 }
