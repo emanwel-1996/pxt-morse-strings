@@ -9,6 +9,7 @@ class MorseString {
         }
         this.text = text;
     }
+    //% block="create Morse string %text" blockNamespace=Morse
     public getText(): string {
         return this.text;
     }
@@ -19,7 +20,7 @@ class MorseString {
  */
 //% block="Morse" weight=0 color=#000000 icon="\uf012"
 namespace Morse {
-    //% block="create Morse string %text"
+    
     export function createMorseString(text: string): string {
         return new MorseString(text).getText();
     }
