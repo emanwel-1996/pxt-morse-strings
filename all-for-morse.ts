@@ -10,8 +10,8 @@ class MorseString {
         this.text = text;
     }
     //% block="create Morse string %text" blockNamespace=Morse
-    public getText(): string {
-        return this.text;
+    public createMorseString(text: string): string {
+        return new MorseString(text).text
     }
 }
 
@@ -19,9 +19,4 @@ class MorseString {
  * Functions for treating Morse strings
  */
 //% block="Morse" weight=0 color=#000000 icon="\uf012"
-namespace Morse {
-    
-    export function createMorseString(text: string): string {
-        return new MorseString(text).getText();
-    }
-}
+namespace Morse {}
