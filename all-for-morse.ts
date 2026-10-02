@@ -21,7 +21,10 @@ class MorseString {
         this.value = value;
     }
 
-    //% block="convert $this to string" blockNamespace=Morse
+    // Usamos $this en la etiqueta del bloque y definimos explícitamente su comportamiento visual.
+    //% block="convert $this to string"
+    //% this.shadow=variables_get
+    //% this.defl=cadenaMorse
     public toString(): string {
         return this.value;
     }
