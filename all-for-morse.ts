@@ -1,5 +1,5 @@
 class MorseString {
-    public text: string;
+    private text: string;
     constructor(text: string) {
         for (let i: number = 0; i < text.length; i++) {
             if (text[i] !== "." && text[i] !== "-" && text[i] !== "/" && text[i] !== " ") {
@@ -9,6 +9,9 @@ class MorseString {
         }
         this.text = text;
     }
+    public get contents(): string {
+        return this.text;
+    }
 }
 
 /**
@@ -17,7 +20,7 @@ class MorseString {
 //% block="Morse" weight=0 color=#000000 icon="\uf012"
 namespace Morse {
     //% block="create Morse string %text"
-    export function createMorseString(text: string): MorseString {
-        return new MorseString(text);
+    export function createMorseString(text: MorseString): string {
+        return text.contents
     }
 }
