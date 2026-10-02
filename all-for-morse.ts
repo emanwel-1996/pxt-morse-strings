@@ -1,1 +1,1 @@
-// Add your code here
+class MorseSring {}
