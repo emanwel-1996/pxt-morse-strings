@@ -27,4 +27,22 @@ class MorseString {
     public toString(): string {
         return this.value;
     }
+
+    public toLatin(): void {
+        const m: string[] = [const m: string[] = [".-", "-...", "-.-.", "-..", ".", "..-.", "--.", "....", "..", ".---", "-.-", ".-..", "--", "-.", "---", ".--.", "--.-", ".-.", "...", "-", "..-", "...-", ".--", "-..-", "-.--", "--..", ".-", "-...", "-.-.", "-..", ".", "..-.", "--.", "....", "..", ".---", "-.-", ".-..", "--", "-.", "---", ".--.", "--.-", ".-.", "...", "-", "..-", "...-", ".--", "-..-", "-.--", "--..", "-----", ".----", "..---", "...--", "....-", ".....", "-....", "--...", "---..", "----.", ".-.-.-", "--..--", "..--..", "/"];
+]
+    }
+}
+
+class LatinString {
+    private value: string;
+    constructor(value: string) {
+        for (let i: number = 0; i < value.length; i++) {
+            if ((value[i] < "A" || value[i] > "Z") && (value[i] < "a" || value[i] > "z") && (value[i] < "0" || value[i] > "9") && value[i] !== "." && value[i] !== "," && value[i] !== "?" && value[i] !== " ") {
+                console.error("Invalid character.");
+                return;
+            }
+        }
+        this.value = value;
+    }
 }
